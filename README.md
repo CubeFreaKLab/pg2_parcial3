@@ -1,6 +1,6 @@
 # Jorge Choque PG2 TECBA - Librería de Validadores
 
-Una librería básica de validadores para datos personales y de contacto desarrollada como parte del Parcial 3 de Programación 2. Implementa el patrón Builder para construcción fluida de objetos con validación automática.
+Una librería de validadores para datos personales y de contacto desarrollada como parte del Parcial 3 de Programación 2. Implementa el patrón Builder para construcción fluida de objetos con validación automática.
 
 ## Características
 
