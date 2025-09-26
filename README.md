@@ -20,7 +20,7 @@ Una librería básica de validadores para datos personales y de contacto desarro
 pip install --index-url https://test.pypi.org/simple/ jorge_ch_pg2_tecba
 ```
 
-### Desde PyPI (cuando esté disponible)
+### Desde PyPI
 
 ```bash
 pip install jorge_ch_pg2_tecba
@@ -429,17 +429,12 @@ pip install -e .
 python ejemplo.py
 ```
 
-### Ejecutar Tests
-
-```bash
-pytest  # Cuando se implementen tests
-```
 
 ## 📊 Información del Proyecto
 
 - **Versión**: 0.0.1
-- **Autor**: Jorge Ch
-- **Email**: jorge.ch@tecba.com
+- **Autor**: Jorge Choque Ferrufino
+- **Email**: jorgechoque.sis24ch@tecba.edu.bo
 - **Licencia**: MIT License
 - **Python**: >=3.8
 - **Repositorio**: https://github.com/jorge-ch/pg2_parcial3
