@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Ejemplo de uso de la librería jorge_ch_pg2_tecba
+Ejemplo de uso de la librería jorge_choque_pg2_tecba
 
 Este archivo demuestra cómo usar los validadores y la clase Persona
 con el patrón Builder para crear y validar datos personales y de contacto.
 """
 
-from src.jorge_ch_pg2_tecba.core import Persona, PersonaBuilder
-from src.jorge_ch_pg2_tecba.validators import (
+from src.jorge_choque_pg2_tecba.core import Persona, PersonaBuilder
+from src.jorge_choque_pg2_tecba.validators import (
     ValidadorBase, 
     ValidadorDatosPersonales, 
     ValidadorDatosContacto
@@ -102,7 +102,7 @@ def ejemplo_validaciones_fallidas():
 
 def main():
     """Función principal que ejecuta todos los ejemplos."""
-    print("Iniciando ejemplos de la librería jorge_ch_pg2_tecba\\n")
+    print("Iniciando ejemplos de la librería jorge_choque_pg2_tecba\\n")
     
     ejemplo_validadores()
     ejemplo_persona_builder()

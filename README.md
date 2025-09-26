@@ -404,7 +404,7 @@ print(f"Librería instalada correctamente: {persona.nombre}")
 - **Email**: jorgechoque.sis24ch@tecba.edu.bo
 - **Licencia**: MIT License
 - **Python**: >=3.8
-- **Repositorio**: https://github.com/jorge-ch/pg2_parcial3
+- **Repositorio**: https://github.com/CubeFreakLab/pg2_parcial3
 
 ## 🤝 Contribuciones
 
