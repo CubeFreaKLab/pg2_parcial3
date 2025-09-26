@@ -7,21 +7,12 @@ from setuptools import setup, find_packages
 
 # Read the requirements from requirements.txt
 def read_requirements():
-    try:
-        with open('requiemens.txt', 'r', encoding='utf-8') as f:
-            requirements = []
-            for line in f:
-                line = line.strip()
-                # Skip empty lines, comments, and built-in modules
-                if line and not line.startswith('#') and not line.startswith('re'):
-                    # Remove version comments
-                    if '#' in line:
-                        line = line.split('#')[0].strip()
-                    if line and not line.startswith('-'):
-                        requirements.append(line)
-            return requirements
-    except FileNotFoundError:
-        return []
+    """
+    Lee las dependencias de runtime (no las de desarrollo).
+    Para esta librería, no hay dependencias externas - solo usa módulos estándar.
+    """
+    # Tu librería solo usa 're' (regex) que es built-in, no necesita instalación
+    return []
 
 # Read the long description from README if it exists
 def read_long_description():
@@ -32,7 +23,7 @@ def read_long_description():
         return "Una librería básica de validadores para datos personales y de contacto"
 
 setup(
-    name="jorge_ch_pg2_tecba",
+    name="jorge-choque-pg2-tecba",
     version="0.0.1",
     author="Jorge Daniel Choque Ferrufino",
     author_email="jorgechoque.sis24ch@tecba.edu.bo",

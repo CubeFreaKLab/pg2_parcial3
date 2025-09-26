@@ -1,4 +1,4 @@
-# Jorge Ch PG2 TECBA - Librería de Validadores
+# Jorge Choque PG2 TECBA - Librería de Validadores
 
 Una librería básica de validadores para datos personales y de contacto desarrollada como parte del Parcial 3 de Programación 2. Implementa el patrón Builder para construcción fluida de objetos con validación automática.
 
@@ -14,24 +14,8 @@ Una librería básica de validadores para datos personales y de contacto desarro
 
 ## Instalación
 
-### Desde TestPyPI
-
 ```bash
-pip install --index-url https://test.pypi.org/simple/ jorge_ch_pg2_tecba
-```
-
-### Desde PyPI
-
-```bash
-pip install jorge_ch_pg2_tecba
-```
-
-### Para Desarrollo
-
-```bash
-git clone https://github.com/CubeFreaKLab/pg2_parcial3.git
-cd pg2_parcial3
-pip install -e .
+pip install -i https://test.pypi.org/simple/ jorge-choque-pg2-tecba
 ```
 
 ## API - Clase Persona (Módulo Core)
@@ -138,7 +122,7 @@ Crea una persona con nombre y edad establecidos.
 ### Ejemplo Básico - Construcción Completa de Persona
 
 ```python
-from jorge_ch_pg2_tecba.core import Persona
+from jorge_choque_pg2_tecba.core import Persona
 
 # Crear persona con todos los datos
 persona = (Persona()
@@ -164,7 +148,7 @@ print(f"Email: {persona.email}")             # maria@email.com
 ### Ejemplo con Datos Parciales
 
 ```python
-from jorge_ch_pg2_tecba.core import PersonaBuilder
+from jorge_choque_pg2_tecba.core import PersonaBuilder
 
 # Crear persona solo con datos básicos
 persona = (PersonaBuilder.con_datos_basicos("Juan Pérez", 35)
@@ -181,7 +165,7 @@ print(f"Datos de contacto: {persona.obtener_datos_contacto()}")
 ### Ejemplo de Validación y Manejo de Errores
 
 ```python
-from jorge_ch_pg2_tecba.core import Persona
+from jorge_choque_pg2_tecba.core import Persona
 
 try:
     # Intentar crear persona con datos inválidos
@@ -208,7 +192,7 @@ except ValueError as e:
 ### Ejemplo de Uso con Validadores Independientes
 
 ```python
-from jorge_ch_pg2_tecba.validators import (
+from jorge_choque_pg2_tecba.validators import (
     ValidadorDatosPersonales, 
     ValidadorDatosContacto
 )
@@ -241,7 +225,7 @@ persona = (Persona()
 ### Ejemplo de Copia y Modificación
 
 ```python
-from jorge_ch_pg2_tecba.core import PersonaBuilder
+from jorge_choque_pg2_tecba.core import PersonaBuilder
 
 # Crear persona original
 persona_original = (Persona()
@@ -293,7 +277,7 @@ def registrar_empleado():
 ### ValidadorBase
 
 ```python
-from jorge_ch_pg2_tecba.validators import ValidadorBase
+from jorge_choque_pg2_tecba.validators import ValidadorBase
 
 validador = ValidadorBase()
 print(validador.validar_solo_numeros("12345"))      # True
@@ -304,7 +288,7 @@ print(validador.validar_alfanumerico("Casa123"))    # True
 ### ValidadorDatosPersonales
 
 ```python
-from jorge_ch_pg2_tecba.validators import ValidadorDatosPersonales
+from jorge_choque_pg2_tecba.validators import ValidadorDatosPersonales
 
 validador_personal = ValidadorDatosPersonales()
 print(validador_personal.validar_nombre("María González"))  # True
@@ -315,7 +299,7 @@ print(validador_personal.validar_documento_identidad("12345678"))  # True
 ### ValidadorDatosContacto
 
 ```python
-from jorge_ch_pg2_tecba.validators import ValidadorDatosContacto
+from jorge_choque_pg2_tecba.validators import ValidadorDatosContacto
 
 validador_contacto = ValidadorDatosContacto()
 print(validador_contacto.validar_email("usuario@ejemplo.com"))    # True
@@ -395,14 +379,14 @@ twine check dist/*
 twine upload --repository testpypi dist/*
 
 # 5. Instalar desde TestPyPI para probar
-pip install --index-url https://test.pypi.org/simple/ jorge_ch_pg2_tecba
+pip install -i https://test.pypi.org/simple/ jorge-choque-pg2-tecba
 ```
 
 ### Paso 4: Verificar Instalación
 
 ```python
-import jorge_ch_pg2_tecba
-from jorge_ch_pg2_tecba.core import Persona
+import jorge_choque_pg2_tecba
+from jorge_choque_pg2_tecba.core import Persona
 
 # Crear persona de prueba
 persona = (Persona()
@@ -413,24 +397,7 @@ persona = (Persona()
 print(f"Librería instalada correctamente: {persona.nombre}")
 ```
 
-## 🛠️ Desarrollo
-
-### Instalación para Desarrollo
-
-```bash
-git clone https://github.com/jorge-ch/pg2_parcial3.git
-cd pg2_parcial3
-pip install -e .
-```
-
-### Ejecutar Ejemplos
-
-```bash
-python ejemplo.py
-```
-
-
-## 📊 Información del Proyecto
+##  Información del Proyecto
 
 - **Versión**: 0.0.1
 - **Autor**: Jorge Choque Ferrufino
@@ -452,10 +419,11 @@ Las contribuciones son bienvenidas. Por favor:
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver archivo [LICENSE](LICENSE) para más detalles.
-```
 
 ## 🔧 Uso Básico
-from jorge_ch_pg2_tecba.validators import ValidadorDatosPersonales, ValidadorDatosContacto
+
+```python
+from jorge_choque_pg2_tecba.validators import ValidadorDatosPersonales, ValidadorDatosContacto
 
 # Validador de datos personales
 validador_personal = ValidadorDatosPersonales()
@@ -473,7 +441,7 @@ print(validador_contacto.validar_direccion("Calle 123 #45-67"))  # True
 ### Clase Persona con Patrón Builder
 
 ```python
-from jorge_ch_pg2_tecba.core import Persona
+from jorge_choque_pg2_tecba.core import Persona
 
 # Construcción fluida de una persona
 persona = (Persona()
@@ -501,7 +469,7 @@ print(datos)
 ### Builder Alternativo
 
 ```python
-from jorge_ch_pg2_tecba.core import PersonaBuilder
+from jorge_choque_pg2_tecba.core import PersonaBuilder
 
 # Crear persona con datos básicos
 persona = PersonaBuilder.con_datos_basicos("Carlos Silva", 35)
@@ -537,20 +505,6 @@ jorge_ch_pg2_tecba/
 - `validar_email(email)`: Valida formato de email estándar
 - `validar_celular(celular)`: Valida número de celular de 8-15 dígitos
 - `validar_direccion(direccion)`: Valida dirección de 5-200 caracteres
-
-## Desarrollo
-
-Para instalar en modo desarrollo:
-
-```bash
-pip install -e .
-```
-
-Para ejecutar tests:
-
-```bash
-pytest
-```
 
 ## 📊 Información del Proyecto
 

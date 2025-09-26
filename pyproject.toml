@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jorge_ch_pg2_tecba"
+name = "jorge-choque-pg2-tecba"
 version = "0.0.1"
 authors = [
     {name = "Jorge Daniel Choque Ferrufino", email = "jorgechoque.sis24ch@tecba.edu.bo"},
@@ -30,10 +30,6 @@ classifiers = [
 ]
 keywords = ["validators", "validation", "personal data", "contact data"]
 dependencies = [
-    "setuptools>=61.0",
-    "wheel",
-    "build",
-    "twine",
 ]
 
 [project.optional-dependencies]
